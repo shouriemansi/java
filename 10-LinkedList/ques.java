@@ -1,290 +1,196 @@
-// ### Q5. Search for an Element
-
-// Given:
-
-// ```text
-// 10 → 20 → 30 → 40 → null
-// ```
-
-// Search for `30`.
-
-// Print:
-
-// ```text
-// Element found
-// ```
-
-// If the element doesn't exist, print:
-
-// ```text
-// Element not found
-// ```
-
-// **Concept:** Traversal + condition.
-
-// ---
-
-// # 🟡 Level 2 — Insertion
-
-// Now things get interesting.
-
-// ### Q6. Insert at Beginning — Without Input
-
-// Given:
-
-// ```text
-// 20 → 30 → 40 → null
-// ```
-
-// Insert `10` at the beginning.
-
-// Final list:
-
-// ```text
-// 10 → 20 → 30 → 40 → null
-// ```
-
-// **Important:** Don't create a completely new list. Modify the existing list.
-
-// **Concept you should understand:**
-
-// ```java
-// newNode.next = head;
-// head = newNode;
-// ```
-
-// ---
-
 // ### Q7. Insert at Beginning — With User Input
 
-// Take `n` values from the user and create a linked list by **inserting every new value at the beginning**.
+//Insert at Beginning — Without Input
+// **Important:** Don't create a completely new list. Modify the existing list.
 
-// For input:
+// import java.util.Scanner;
+// public class ques{
+//     static class Node{
+//         int data;
+//         Node next;
+//         Node(int data){
+//             this.data=data;
+//             this.next=null;
+//         }
+//     }  
+//     public static void main(String[] args){
+//         Scanner inp=new Scanner(System.in);
+//         System.out.print("Enter number of nodes: ");
+//         int n=inp.nextInt();
+//         Node head=null;
+//         for(int i=0;i<n;i++){
+//             System.out.println("Enter node: ");
+//             int data=inp.nextInt();
+//             Node newNode=new Node(data);
+//             newNode.next=head;
+//             head=newNode;
+//         }
+//         Node temp=head;
+//         System.out.println("Linked List: ");
+//         while(temp!=null){
+//             System.out.print(temp.data + " ");
+//             temp=temp.next;
+//         }
+//     }
+// }
 
-// ```text
-// 4
-// 10 20 30 40
-// ```
+// Input:  10 20 30 40
+// Output: 40 30 20 10
 
-// Output should be:
 
-// ```text
-// 40 30 20 10
-// ```
 
-// 🔥 This is important because it makes you understand **why insertion at beginning reverses the order**.
 
-// ---
+//Insert at End — Without Input
 
-// ### Q8. Insert at End — Without Input
+// public class ques{
+//     static class Node{
+//         int data;
+//         Node next;
+//         Node(int data){
+//             this.data=data;
+//             this.next=null;
+//         }
+//     }  
+//     public static void main(String[] args){
+//         Node head=new Node(10);
+//         head.next=new Node(20);
+//         head.next.next=new Node(30);
+//         head.next.next.next=new Node(40);
+//         Node newNode=new Node(50);
+//         Node temp=head;
+//         while(temp.next!=null){
+//             temp=temp.next;
+//         }
+//         temp.next=newNode;
+//         temp=head;
+//         while(temp!=null){
+//             System.out.println(temp.data);
+//             temp=temp.next;
+//         }
+//     }
+// }
 
-// Given:
 
-// ```text
-// 10 → 20 → 30 → null
-// ```
-
-// Insert `40` at the end.
-
-// Final:
-
-// ```text
-// 10 → 20 → 30 → 40 → null
-// ```
-
-// **Concept:** Traverse until:
-
-// ```java
-// temp.next == null
-// ```
-
-// Then connect the new node.
-
-// ---
-
-// ### Q9. Insert at End — With Input
-
+//Insert at End — With Input
 // Take `n` numbers from the user and create the linked list by inserting each number at the **end**.
 
-// Input:
+// import java.util.Scanner;
+// public class ques{
+//     static class Node{
+//         int data;
+//         Node next;
+//         Node(int data){
+//             this.data=data;
+//             this.next=null;
+//         }
+//     }  
+//     public static void main(String[] args){
+//         Scanner inp=new Scanner(System.in);
+//         System.out.print("Enter number of nodes: ");
+//         int n=inp.nextInt();
+//         Node head=null;
+//         for(int i=0;i<n;i++){
+//             System.out.println("Enter node: ");
+//             int data=inp.nextInt();
+//             Node newNode=new Node(data);
+//             if(head==null){
+//                 head=newNode;
+//             }
+//             else{
+//                 Node temp=head;
+//                 while(temp.next!=null){
+//                     temp = temp.next;
+//                 }
+//                 temp.next=newNode;
+//             }
+//         }
+//         Node temp=head;
+//         System.out.println("Linked List: ");
+//         while(temp!=null){
+//             System.out.print(temp.data + " ");
+//             temp=temp.next;
+//         }
+//     }
+// }
 
-// ```text
-// 5
-// 10 20 30 40 50
-// ```
+// Input: 10 20 30 40 50
+// Output: 10 20 30 40 50
 
-// Output:
 
-// ```text
-// 10 20 30 40 50
-// ```
 
-// Compare this with Q7.
-
-// You should be able to explain **why Q7 reverses the order but Q9 doesn't.**
-
-// ---
-
-// ### Q10. Insert at a Specific Position
-
-// Given:
-
-// ```text
-// 10 → 20 → 40 → 50 → null
-// ```
-
+//Insert at a Specific Position
 // Insert `30` at position `3`.
-
-// Final:
-
-// ```text
-// 10 → 20 → 30 → 40 → 50 → null
-// ```
-
 // Assume positions start from **1**.
 
-// Test yourself with:
+// public class ques{
+//     static class Node{
+//         int data;
+//         Node next;
+//         Node(int data){
+//             this.data=data;
+//             this.next=null;
+//         }
+//     }
+//      public static void main(String[] args){
+//         Node head=new Node(10);
+//         head.next=new Node(20);
+//         head.next.next=new Node(40);
+//         head.next.next.next=new Node(50);
+//         int value=30;
+//         int position=3;
+//         Node newNode=new Node(value);
+//         if(position==1){
+//             newNode.next=head;
+//             head=newNode;
+//         }
+//         else{
+//             Node temp=head;
+//             for (int i=1;i<position-1;i++){
+//                 temp=temp.next;
+//             }
+//             newNode.next=temp.next;
+//             temp.next=newNode;
+//         }
+//         Node temp=head;
+//         while(temp!=null){
+//             System.out.print(temp.data + " ");
+//             temp=temp.next;
+//         }
+//     }
+// }
 
-// ```text
-// Position = 1
-// Position = 3
-// Position = 5
-// ```
 
-// Think carefully about what happens when inserting at position `1`.
 
-// ---
+//Delete First Node
 
-// # 🟡 Level 3 — Deletion
 
-// ### Q11. Delete First Node
 
-// Given:
+//Delete Last Node
 
-// ```text
-// 10 → 20 → 30 → 40 → null
-// ```
 
-// Delete the first node.
 
-// Expected:
+//Delete a Node at a Given Position
 
-// ```text
-// 20 → 30 → 40 → null
-// ```
 
-// You should figure out why:
 
-// ```java
-// head = head.next;
-// ```
 
-// works.
+//Delete a Node by Value
 
-// ---
 
-// ### Q12. Delete Last Node
 
-// Given:
 
-// ```text
-// 10 → 20 → 30 → 40 → null
-// ```
 
-// Delete `40`.
 
-// Expected:
 
-// ```text
-// 10 → 20 → 30 → null
-// ```
 
-// **Hint:** You need to reach the node **before** the last node.
 
-// Think about what condition you need:
 
-// ```java
-// temp.next.next == null
-// ```
+//Count Even and Odd Nodes
 
-// ---
 
-// ### Q13. Delete a Node at a Given Position
 
-// Given:
 
-// ```text
-// 10 → 20 → 30 → 40 → 50
-// ```
-
-// Delete the node at position `3`.
-
-// Expected:
-
-// ```text
-// 10 → 20 → 40 → 50
-// ```
-
-// Try positions:
-
-// ```text
-// 1
-// 3
-// 5
-// ```
-
-// This is a very important exam-type question.
-
-// ---
-
-// ### Q14. Delete a Node by Value
-
-// Given:
-
-// ```text
-// 10 → 20 → 30 → 40 → 50
-// ```
-
-// Delete the node containing `30`.
-
-// Expected:
-
-// ```text
-// 10 → 20 → 40 → 50
-// ```
-
-// Then test:
-
-// ```text
-// Delete 10
-// Delete 50
-// Delete 100
-// ```
-
-// This forces you to handle different cases.
-
-// ---
-
-// # 🟠 Level 4 — Slightly More Thinking
-
-// ### Q15. Count Even and Odd Nodes
-
-// Given:
-
-// ```text
-// 10 → 15 → 20 → 25 → 30 → null
-// ```
-
-// Print:
-
-// ```text
-// Even = 3
-// Odd = 2
-// ```
-
-// ---
-
-// ### Q16. Find the Middle Node
+//Find the Middle Node
 
 // Given:
 
@@ -518,7 +424,7 @@
 
 // ---
 
-// ### Q25. Detect a Cycle ⭐
+//Detect a Cycle ⭐
 
 // Normally:
 
@@ -549,67 +455,6 @@
 // ```
 
 // This introduces **Floyd's slow/fast pointer algorithm**.
-
-// ---
-
-// # 🧠 Your Exam Practice Order
-
-// Don't solve these randomly. Do them in this order:
-
-// ### Day 1 — Fundamentals
-
-// **Q1 → Q2 → Q3 → Q4 → Q5**
-
-// You should become comfortable with:
-
-// ```java
-// Node
-// head
-// temp
-// temp.data
-// temp.next
-// temp = temp.next
-// ```
-
-// ### Day 2 — Insertion
-
-// **Q6 → Q7 → Q8 → Q9 → Q10**
-
-// You should be able to write:
-
-// ```java
-// insertAtBeginning()
-// insertAtEnd()
-// insertAtPosition()
-// ```
-
-// without looking at notes.
-
-// ### Day 3 — Deletion
-
-// **Q11 → Q12 → Q13 → Q14**
-
-// Especially understand the difference between:
-
-// ```java
-// head = head.next;
-// ```
-
-// and
-
-// ```java
-// temp.next = temp.next.next;
-// ```
-
-// ### Day 4 — Exam-level
-
-// **Q15 → Q16 → Q17 → Q18 → Q19**
-
-// ⭐ **Q17 (reverse)** is a must-do.
-
-// ### Then Medium
-
-// **Q20 → Q21 → Q22 → Q23 → Q24 → Q25**
 
 // ---
 
