@@ -1,60 +1,14 @@
-// ### 1. Remove Duplicates
-
-// Take `n` integers from the user and print only the **unique numbers**.
-
-// **Input:**
-
-// ```text
-// 8
-// 10 20 10 30 20 40 30 50
-// ```
-
-// **Output:**
-
-// ```text
-// [10, 20, 30, 40, 50]
-// ```
-
-
-
-// ### 2. Check if Element Exists
-
-// Take `n` integers, store them in a `HashSet`, then take another integer and check whether it exists.
-
-// **Input:**
-
-// ```text
-// 5
-// 10 20 30 40 50
-// 30
-// ```
-
-// **Output:**
-
-// ```text
-// Present
-// ```
-
-// ---
-
-// ### 3. Count Unique Elements
+//Count Unique Elements
 
 // Take an array and find how many **different elements** it contains.
 
-// **Input:**
 
-// ```text
-// 7
-// 1 2 2 3 4 4 5
-// ```
 
-// **Output:**
 
-// ```text
-// 5
-// ```
 
-// ---
+
+
+
 
 // ### 4. Print Duplicate Elements
 
