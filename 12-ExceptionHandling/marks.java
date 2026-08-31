@@ -13,7 +13,7 @@ class InvalidMarksException extends Exception{
 public class marks {
     static void validateMarks(int marks) throws InvalidMarksException{
         if(marks<0 || marks>100){
-            throw new InvalidMarksException("Marks can not be negative!")
+            throw new InvalidMarksException("Marks should be betwwen 0 to 100!");
         }
         System.out.println("Valid marks!");
     }
