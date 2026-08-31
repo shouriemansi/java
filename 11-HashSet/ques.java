@@ -1,35 +1,3 @@
-//Count Unique Elements
-
-// Take an array and find how many **different elements** it contains.
-
-
-
-
-
-
-
-
-
-// ### 4. Print Duplicate Elements
-
-// Given an array, print the elements that occur more than once.
-
-// **Input:**
-
-// ```text
-// 8
-// 1 2 3 2 4 5 1 6
-// ```
-
-// **Output:**
-
-// ```text
-// 2 1
-// ```
-
-// 💡 **Hint:** Use two HashSets.
-
-// ---
 
 // ### 5. Find Common Elements
 
