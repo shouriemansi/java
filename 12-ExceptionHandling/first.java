@@ -23,16 +23,43 @@
 //Null String: Create a String variable and initially assign: String name = null;
 // Try to call: name.length(); Handle the exception.
 
+// import java.util.*;
+// public class first {
+//     public static void main(String[] args) {
+//         Scanner inp=new Scanner(System.in);
+//         String str=null;
+//         try{
+//             System.out.println("Size: " + str.length());
+//         }
+//         catch(NullPointerException e){
+//             System.out.println("Null pointer exception!");
+//         }
+//     }
+// }
+
+
+// with finally: 
+
 import java.util.*;
 public class first {
+    static int division(int n1, int n2){
+        return n1/n2;
+    }
     public static void main(String[] args) {
         Scanner inp=new Scanner(System.in);
-        String str=null;
+        System.out.print("Enter first number: ");
+        int n1=inp.nextInt();
+        System.out.print("Enter second number: ");
+        int n2=inp.nextInt();
         try{
-            System.out.println("Size: " + str.length());
+            int result=division(n1, n2);
+            System.out.println("Division result: " + result);
         }
-        catch(NullPointerException e){
-            System.out.println("Null pointer exception!");
+        catch(ArithmeticException e){
+            System.out.println("Cannot divide by 0");
+        }
+        finally{
+            System.out.println("Program executed!");
         }
     }
 }
