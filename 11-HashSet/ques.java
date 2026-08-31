@@ -1,7 +1,4 @@
-
-// ### 5. Find Common Elements
-
-// Given two arrays, print the elements that are present in **both**.
+//Find Common Elements. Given two arrays, print the elements that are present in **both**.
 
 // **Input:**
 
